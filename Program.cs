@@ -31,7 +31,7 @@ namespace Order
             int quantityOrder = int.Parse(Console.ReadLine());
             for (int i = 1; i <= quantityOrder; i++)
             {
-                Console.WriteLine($"Enter #(i) item data:");
+                Console.WriteLine($"Enter #{i} item data:");
                 Console.Write("Name: ");
                 string itemName = Console.ReadLine();
                 Console.Write("Price: ");

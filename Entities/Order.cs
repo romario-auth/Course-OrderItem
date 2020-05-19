@@ -54,13 +54,7 @@ namespace Order
             summary.AppendLine("Items:");
             foreach(OrderItem item in Items)
             {
-                //summary.AppendLine(printProduct.Name.ToString());
-                //summary.Append(", ");
-                //summary.Append(item.Product.Price);
-                summary.Append(", Quantity: ");
-                summary.Append(item.Quantity);
-                summary.Append(", SubTotal: $");
-                summary.AppendLine(item.SubTotal().ToString("F2", CultureInfo.InvariantCulture));
+                summary.AppendLine(item.ToString());
             }
             summary.Append("Total: $");
             summary.Append(Total());

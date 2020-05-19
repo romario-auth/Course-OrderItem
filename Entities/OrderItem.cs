@@ -1,5 +1,4 @@
-using System;
-using Order.Entities;
+using System.Globalization;
 
 namespace Order.Entities
 {
@@ -13,12 +12,20 @@ namespace Order.Entities
         {
             Quantity = quantity;
             Price = price;
-            Product = Product;
+            Product = product;
         }
 
         public double SubTotal()
         {
             return Quantity * Price;
+        }
+
+        public override string ToString()
+        {
+            return Product.Name +
+                ", " + "$" + Price.ToString(CultureInfo.InvariantCulture) + 
+                ", " + "Quantity: " + Quantity +
+                ", SubTotal: $" + SubTotal();
         }
     }
 }
